@@ -1,0 +1,26 @@
+{% extends 'favesongs_base.html' %}
+
+{% block content %}
+
+<h1>Song Details</h1>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Genre</th>
+        <th>Why</th>
+    </tr>
+    <tr>
+        <td>{{ details.Name }}</td>
+        <td>{{ details.Artist }}</td>
+        <td>{{ details.Album }}</td>
+        <td>{{ details.Genre }}</td>
+        <td>{{ details.Why }}</td>
+    </tr>
+</table>
+
+<button><a href="{% url 'favesongs_edit' details.id %}">Update</a></button>
+
+{% endblock %}

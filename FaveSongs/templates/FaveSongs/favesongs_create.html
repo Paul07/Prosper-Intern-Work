@@ -1,0 +1,14 @@
+{% extends 'favesongs_base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Please enter your favorite song!</h1>
+    <form action="" method="POST" class="songentry">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn">SUBMIT</button>
+    </form>
+</div>
+
+{% endblock %}

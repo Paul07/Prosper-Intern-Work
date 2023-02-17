@@ -1,0 +1,31 @@
+{% extends "favesongs_base.html "%}
+
+{% block content %}
+<h1>Song List</h1>
+
+<table border='1'>
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+  </tr>
+  {% for x in songs %}
+    <tr>
+      <!-- Created a link to take you to the details page for the song -->
+      <td class="selection"><a href="{% url 'favesongs_details' x.id %}">{{ x.Name }}</a></td>
+      <td>{{ x.Artist }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<!-- clickable page numbers -->
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">&raquo;</a>
+</div>
+
+{% endblock %}

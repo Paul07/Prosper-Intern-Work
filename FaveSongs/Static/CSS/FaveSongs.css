@@ -1,0 +1,56 @@
+.base{
+height: 710px;
+background-image: url('/static/images/guitar.jpg');
+background-size: 100% 100%;
+background-attachment: fixed;
+text-align: center;
+color: white;
+}
+
+.navbar{
+background-color: black;
+height: 40px;
+}
+
+.btn{
+border-radius: 6px 6px 6px 6px;
+background-color: gray;
+}
+
+.btn:hover{
+color: white;
+}
+
+table{
+border: white;
+margin-left: auto;
+margin-right: auto;
+}
+
+td{
+padding: 5px;
+border-radius: 4px 4px 4px 4px;
+}
+
+th{
+padding: 5px;
+border-radius: 4px 4px 4px 4px;
+}
+
+.selection:hover{
+background-color: white;
+}
+
+
+.pagination a{
+color: white;
+padding: 2px 10px;
+}
+
+
+.pagination a:hover:not(.active) {
+background-color: white;
+color: red;
+}
+
+

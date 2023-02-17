@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>{% block title %}Favorite Songs{% endblock %}</title>
+        <link rel="stylesheet" href="{% static '/css/FaveSongs.css' %}">
+    </head>
+
+    <div class="navbar">
+        <button class="btn"><a href="{% url 'favesongs_home' %}">Home</a></button>
+        <button class="btn"><a href="{% url 'favesongs_create' %}">Add Songs</a></button>
+        <button class="btn"><a href="{% url 'favesongs_thelist' %}">See the list</a></button>
+
+
+    </div>
+    <body>
+
+        <div class="base">
+            {% block content %}
+            {% endblock %}
+        </div>
+    <footer id="footer">
+        <p>
+            <a href="https://paul07.github.io/" target="_blank"> Paul Brandenburger</a> | &copy 2023
+        </p>
+    </footer>
+    </body>
+</html>

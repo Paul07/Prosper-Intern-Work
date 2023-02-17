@@ -1,0 +1,16 @@
+{% extends 'favesongs_base.html' %}
+
+{% block content %}
+<h1>Delete Songs</h1>
+
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+         <h3>Permanently remove song from the list: "{{ entry }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+    <button><a href="{% url 'favesongs_thelist' %}">Return</a></button>
+    </div>
+{% endblock %}
